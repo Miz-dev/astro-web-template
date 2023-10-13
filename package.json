@@ -1,0 +1,21 @@
+{
+  "name": "astro-wordpress",
+  "type": "module",
+  "version": "0.0.1",
+  "scripts": {
+    "dev": "astro dev",
+    "start": "astro dev",
+    "build": "astro build",
+    "preview": "astro preview",
+    "astro": "astro"
+  },
+  "dependencies": {
+    "astro": "^3.2.4"
+  },
+  "devDependencies": {
+    "astro-compress": "2.0.15",
+    "sass": "^1.69.2",
+    "terser": "^5.21.0",
+    "vite-plugin-sass-glob-import": "^2.0.0"
+  }
+}

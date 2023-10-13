@@ -1,0 +1,63 @@
+/* keyframes
+================================================== */
+// Scale Animation
+@keyframes scale-animation {
+  0% {
+    transform: scaleX(1);
+  }
+  50% {
+    transform: scaleX(1.2);
+  }
+  100% {
+    transform: scaleX(1);
+  }
+}
+
+// × Button Animation
+@keyframes closeBar1 {
+  0% {
+    transform: translateX(-50%) translateY(-4px);
+  }
+  50% {
+    transform: translateX(-50%) translateY(0) rotate(0);
+  }
+  100% {
+    transform: translateX(-50%) translateY(0) rotate(45deg);
+  }
+}
+
+@keyframes closeBar2 {
+  0% {
+    transform: translateX(-50%) translateY(4px);
+  }
+  50% {
+    transform: translateX(-50%) translateY(0) rotate(0);
+  }
+  100% {
+    transform: translateX(-50%) translateY(0) rotate(-45deg);
+  }
+}
+
+@keyframes closeBar1Rev {
+  0% {
+    transform: translateX(-50%) translateY(0) rotate(45deg);
+  }
+  50% {
+    transform: translateX(-50%) translateY(0) rotate(0);
+  }
+  100% {
+    transform: translateX(-50%) translateY(-4px);
+  }
+}
+
+@keyframes closeBar2Rev {
+  0% {
+    transform: translateX(-50%) translateY(0) rotate(-45deg);
+  }
+  50% {
+    transform: translateX(-50%) translateY(0) rotate(0);
+  }
+  100% {
+    transform: translateX(-50%) translateY(4px);
+  }
+}

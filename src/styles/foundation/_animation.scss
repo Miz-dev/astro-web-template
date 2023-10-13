@@ -1,0 +1,72 @@
+/* animation
+================================================== */
+
+// scroll_up
+.scroll_up {
+  transition: 0.7s ease-in-out;
+  transform: translateY(30px);
+  transition-delay: 0.5s;
+  opacity: 0;
+  &.-quick {
+    transition-delay: 0.2s;
+  }
+}
+.scroll_up.on {
+  transform: translateY(0);
+  opacity: 1;
+  &.-quick {
+    transform: translateY(0);
+    opacity: 1;
+  }
+}
+
+// show_up
+.show_up {
+  transition: 0.5s ease-out;
+  transform: translateY(100%);
+  transition-delay: 1.3s;
+  opacity: 0;
+}
+.show_up.on {
+  transform: translateY(0);
+  opacity: 1;
+}
+
+// show
+.show {
+  transition: 1s ease-out;
+  transition-delay: 2s;
+  opacity: 0;
+}
+.show.on {
+  opacity: 1;
+}
+
+.text-split {
+  overflow: hidden;
+
+  span {
+    display: inline-block;
+    min-width: 0.15em;
+  }
+}
+
+// 下から一文字ずつ出てくるアニメーション
+.text-split {
+  span {
+    .text-sprit-area & {
+      opacity: 0;
+      transform: translateY(100%);
+    }
+    .text-sprit-area .is-active & {
+      opacity: 1;
+      transform: translateY(0);
+      transition: transform cubic-bezier(0.7, 0.2, 0.1, 1) 1.6s;
+      @for $i from 1 through 30 {
+        &:nth-child(#{$i}) {
+          transition-delay: #{($i - 1) * 0.04s};
+        }
+      }
+    }
+  }
+}
