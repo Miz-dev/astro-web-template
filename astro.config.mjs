@@ -1,31 +1,22 @@
 import { defineConfig } from 'astro/config'
+import sassPlugin from 'vite-plugin-sass-glob-import'
 
 // https://astro.build/config
 export default defineConfig({
-  srcDir: './src',
-  outDir: './dist',
-  site: 'https://example.com/',
-  server: { host: true },
-  compressHTML: false,
-  vite: {
-    resolve: {
-      alias: {
-        '@/*': 'src/*',
-      },
-    },
-    // css: {
-    //   preprocessorOptions: {
-    //     scss: {
-    //       additionalData: `
-    //         @use "./src/styles/utils/variable/_index.scss";
-    //         @use "./src/styles/utils/function/_index.scss" as fn;
-    //         @use "./src/styles/utils/mixin/_index.scss" as mixin;
-    //       `,
-    //     },
-    //   },
-    // },
-    build: {
-      assetsInlineLimit: 0,
+	srcDir: './src',
+	outDir: './dist',
+	site: 'https://example.com/',
+	server: { host: true },
+	compressHTML: false,
+	vite: {
+		resolve: {
+			alias: {
+				'@/*': 'src/*'
+			}
+		},
+		plugins: [sassPlugin()],
+		build: {
+			assetsInlineLimit: 0,
 			target: 'es2015',
 			minify: 'terser',
 			cssMinify: false,
@@ -42,10 +33,10 @@ export default defineConfig({
 						return `assets/[name].[extname]`
 					},
 					entryFileNames: () => {
-            return `assets/js/main.js`;
-          },
+						return `assets/js/main.js`
+					}
 				}
-      }
+			}
 		}
-  },
-});
+	}
+})

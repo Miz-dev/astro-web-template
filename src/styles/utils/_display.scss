@@ -1,0 +1,110 @@
+/* display
+================================================== */
+@use '/src/styles/global/index' as *;
+
+.is-sp {
+	@include overTablet {
+		display: none;
+	}
+
+	@include underTablet {
+		display: block;
+	}
+}
+
+.is-pc {
+	@include overTablet {
+		display: block;
+	}
+
+	@include underTablet {
+		display: none;
+	}
+}
+
+br {
+	&.is-pc {
+		@include underTablet {
+			display: contents;
+		}
+	}
+
+	&.is-sp {
+		@include overTablet {
+			display: contents;
+		}
+	}
+}
+
+._sp {
+	display: block !important;
+
+	@include overNarrow {
+		display: none !important;
+	}
+}
+
+._tablet {
+	display: block !important;
+
+	@include overTablet {
+		display: none !important;
+	}
+}
+
+._pc {
+	display: none !important;
+
+	@include overTablet {
+		display: block !important;
+	}
+}
+
+._tablet-only {
+	display: none;
+
+	@include tabletToPc {
+		display: block;
+	}
+}
+
+._pc-only {
+	display: none;
+
+	@include overPc {
+		display: block;
+	}
+}
+
+._sp-only {
+	display: none;
+
+	@include underTablet {
+		display: block;
+	}
+}
+
+// ボックスタイプ
+._block {
+	display: block !important;
+}
+
+._inline {
+	display: inline !important;
+}
+
+._inline-block {
+	display: inline-block !important;
+}
+
+._table {
+	display: table !important;
+}
+
+._table-row {
+	display: table-row !important;
+}
+
+._table-cell {
+	display: table-cell !important;
+}

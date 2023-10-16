@@ -1,0 +1,59 @@
+/* colors
+================================================== */
+// black & white color
+$black: #333333;
+$white: #ffffff;
+
+// main color
+$suuri-green: #00a684;
+$suuri-midgreen: #026e4b;
+
+// text color
+$text-main: #333333;
+$text-gray01: #666666;
+$text-gray02: #999999;
+$text-gray03: #a6a6a6;
+$text-white: #ffffff;
+$text-darkgreen: #015a48;
+
+// background color
+$suuri-midgreen: #026e4b;
+$bg-beige: #f5f4f2;
+$bg-gray01: #f5f4f2;
+
+// line color
+$line-gray01: #e5e5e3;
+$line-gray02: #5c5c5c;
+
+// spot color
+$spot-book-orange: #fcb327;
+$spot-business-blue: #006aa6;
+$spot-bg-green: #028e72;
+
+// gradient color
+$gra-green: var(
+	--gra-green,
+	linear-gradient(
+		154deg,
+		#005438 0%,
+		#005438 14.97%,
+		#045e41 25.03%,
+		rgba(16, 101, 73, 0.8) 34%,
+		rgba(13, 112, 80, 0.5) 41.59%,
+		rgba(7, 113, 79, 0.3) 53.67%,
+		rgba(0, 106, 72, 0) 66.62%
+	)
+);
+$gra-gray: var(
+	--gra-gray,
+	linear-gradient(
+		140deg,
+		#848484 0%,
+		#848584 20.48%,
+		rgba(134, 135, 135, 0.8) 34.24%,
+		rgba(146, 148, 150, 0.8) 46.51%,
+		rgba(159, 161, 163, 0.6) 56.9%,
+		rgba(162, 165, 166, 0.3) 73.42%,
+		rgba(146, 148, 150, 0) 91.13%
+	)
+);

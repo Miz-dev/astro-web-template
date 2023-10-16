@@ -1,0 +1,103 @@
+/* mediaquery
+================================================== */
+@mixin underNarrow {
+	@media screen and (max-width: 359px) {
+		@content;
+	}
+}
+
+@mixin underTablet {
+	@media screen and (max-width: 767px) {
+		@content;
+	}
+}
+
+@mixin underPc {
+	@media screen and (max-width: 1024px) {
+		@content;
+	}
+}
+
+@mixin underWide {
+	@media screen and (max-width: 1280px) {
+		@content;
+	}
+}
+
+@mixin overNarrow {
+	@media screen and (min-width: 375px) {
+		@content;
+	}
+}
+
+@mixin overTablet {
+	@media screen and (min-width: 768px) {
+		@content;
+	}
+}
+
+@mixin overPc {
+	@media screen and (min-width: 1025px) {
+		@content;
+	}
+}
+
+@mixin overWide {
+	@media screen and (min-width: 1281px) {
+		@content;
+	}
+}
+
+@mixin narrowToTablet {
+	@media screen and (min-width: 360px) and (max-width: 767px) {
+		@content;
+	}
+}
+
+@mixin narrowToPc {
+	@media screen and (min-width: 360px) and (max-width: 1024px) {
+		@content;
+	}
+}
+
+@mixin narrowToWide {
+	@media screen and (min-width: 360px) and (max-width: 1280px) {
+		@content;
+	}
+}
+
+@mixin tabletToPc {
+	@media screen and (min-width: 768px) and (max-width: 1024px) {
+		@content;
+	}
+}
+
+@mixin tabletToWide {
+	@media screen and (min-width: 768px) and (max-width: 1280px) {
+		@content;
+	}
+}
+
+@mixin pcToWide {
+	@media screen and (min-width: 1025px) and (max-width: 1280px) {
+		@content;
+	}
+}
+
+@mixin landscape() {
+	@media (orientation: landscape) {
+		@content;
+	}
+}
+
+@mixin portrait() {
+	@media (orientation: portrait) {
+		@content;
+	}
+}
+
+@mixin hover {
+	@media screen and (min-width: 768px) and (hover: hover) {
+		@content;
+	}
+}

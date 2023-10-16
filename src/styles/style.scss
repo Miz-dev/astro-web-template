@@ -1,12 +1,21 @@
-@import './foundation/mixin';
-@import './foundation/vars';
-@import './foundation/base';
-@import './foundation/keyframes';
-@import './foundation/animation';
+@charset "UTF-8";
 
-@import './layout/footer';
-@import './layout/header';
+/* Global
+================================================== */
+@use 'global/index' as *;
 
-// @import './component/test';
+/* Foundation
+================================================== */
+@use 'foundation/index' as *;
 
-// @import './project/test';
+/* Utils
+================================================== */
+@use 'utils/**/*';
+
+/* Component
+================================================== */
+@use 'component/**/*';
+
+/* Project
+================================================== */
+@use 'project/**/*';
